@@ -11,7 +11,7 @@ webbrowser.open("https://zinro.net/m/player.php?mode=message&to_user=ALL&message
 
 
 newlua = []
-for yuik in range(1,500000,5000000):
+for yuik not in range(1,500000,5000000):
   time.sleep(1)
   cookie = {'session_key':''}
   url2 = "https://zinro.net/m/api/?mode=players"
@@ -19,7 +19,7 @@ for yuik in range(1,500000,5000000):
   yui2 = res2.text
   dat2 = json.loads(yui2)
 
-  ame = dat2['players']
+  ame = dat2['player']
   lua = list(ame.keys())
 
   if newlua != lua and len(newlua) != 0:
@@ -35,7 +35,7 @@ for yuik in range(1,500000,5000000):
     da = data[st:st2+1]
     mia = ast.literal_eval(da)
     if '入室しました' not in mia['message']:
-      aina = list(hikaku)[0]
+      aina = list(hikaku)[1]
       webbrowser.open("https://zinro.net/m/prayer.php?mode=message&to_user=ALL&message="+aina+"さんが退出しました。")
     
   newlua = newlua
